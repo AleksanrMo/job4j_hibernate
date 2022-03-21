@@ -11,10 +11,12 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+     <!--   <property name="hibernate.hbm2ddl.auto">update</property> -->
         <mapping class="entity.Company"/>
         <mapping class="entity.Model"/>
         <mapping class="entity.Book"/>
         <mapping class="entity.Author"/>
+        <mapping class="entity.lazy.Company2"/>
+        <mapping class="entity.lazy.Model2"/>
     </session-factory>
 </hibernate-configuration>
