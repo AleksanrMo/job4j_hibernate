@@ -17,5 +17,4 @@ public class Test2 {
             session.getTransaction().commit();
         }
     }
-
 }
