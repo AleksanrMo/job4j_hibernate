@@ -16,7 +16,6 @@ public class Test2 {
             Book book = session.get(Book.class, 1);
             session.remove(book);
             session.getTransaction().commit();
-
         }
     }
 
