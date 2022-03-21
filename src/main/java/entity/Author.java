@@ -25,5 +25,4 @@ public class Author {
     public void setName(String name) {
         this.name = name;
     }
-
 }

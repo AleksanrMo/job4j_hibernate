@@ -6,7 +6,6 @@ import org.hibernate.cfg.Configuration;
 
 public class Test2 {
     public static void main(String[] args) {
-
         Configuration configuration = new Configuration();
         configuration.configure();
         try (
