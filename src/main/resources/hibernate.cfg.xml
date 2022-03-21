@@ -14,14 +14,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <mapping class="entity.Company"/>
         <mapping class="entity.Model"/>
-<<<<<<< HEAD
-=======
         <mapping class="entity.Book"/>
         <mapping class="entity.Author"/>
->>>>>>> 9f5f9b3 (Initial commit)
-
-
-
-
     </session-factory>
 </hibernate-configuration>
