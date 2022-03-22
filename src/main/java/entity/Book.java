@@ -12,7 +12,7 @@ public class Book {
     private int id;
     private String name;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Author> books = new HashSet<>();
+    private Set<Author> authors = new HashSet<>();
 
    public static Book of(String name) {
        Book book = new Book();
@@ -21,14 +21,14 @@ public class Book {
    }
 
    public void add(Author author) {
-       this.books.add(author);
+       this.authors.add(author);
    }
     public Set<Author> getBooks() {
-        return books;
+        return authors;
     }
 
     public void setBooks(Set<Author> books) {
-        this.books = books;
+        this.authors = books;
     }
 
     public String getName() {
