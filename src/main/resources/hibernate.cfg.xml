@@ -18,5 +18,6 @@
         <mapping class="entity.Author"/>
         <mapping class="entity.lazy.Company2"/>
         <mapping class="entity.lazy.Model2"/>
+        <mapping class="entity.Candidate"/>
     </session-factory>
 </hibernate-configuration>
