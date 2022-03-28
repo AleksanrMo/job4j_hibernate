@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 public class Test4 {
     public static void main(String[] args) {
+
         Configuration configuration = new Configuration();
         configuration.configure();
         try (SessionFactory sessionFactory = configuration.buildSessionFactory(); Session session
@@ -23,15 +24,15 @@ public class Test4 {
             System.out.println(query.getResultList());
             query = session.createQuery("from Candidate c where c.name = :name");
             query.setParameter("name", "Alex");
-            System.out.println(query.getSingleResult());
+            System.out.println(query.getResultList());
             session.createQuery("update Candidate c set  c.experience = :exp, c.salary = :sal where c.id = :id")
-            .setParameter("exp", "3 ears")
-            .setParameter("sal", 40000)
-            .setParameter("id", 1)
+                    .setParameter("exp", "3 ears")
+                    .setParameter("sal", 40000)
+                    .setParameter("id", 1)
                     .executeUpdate();
-             session.createQuery("delete from Candidate where id = :id")
-            .setParameter("id", 2)
-                     .executeUpdate();
+            session.createQuery("delete from Candidate where id = :id")
+                    .setParameter("id", 2)
+                    .executeUpdate();
             session.getTransaction().commit();
         }
 
